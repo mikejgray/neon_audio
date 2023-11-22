@@ -25,3 +25,9 @@
 # LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE,  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+# Patch to disable metrics in ovos-audio
+from mock import Mock
+import ovos_audio.utils
+
+ovos_audio.utils.report_timing = Mock()
